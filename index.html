@@ -1,53 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agricultural Machine Sales</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add a stylesheet for custom CSS -->
+    <title>Agrofields - Sustentável e Colorido</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        // Script para alternar entre as abas
+        function openTab(tabName) {
+            var i, tabContent, tabs;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Produtos</a></li>
-                <li><a href="about.html">Sobre nós</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Hero Section -->
-        <section id="home">
-            <div class="hero-container">
-                <h1>Bem-Vindo ao AgriMachines</h1>
-                <p>compra e vendas maquinas agricolas</p>
-                <button class="btn-primary">Explorar Produtos</button>
-                <img src="8r.jpg" alt="Tractor" class="hero-image">
-            </div>
-        </section>
-        <!-- Featured Section -->
-        <section id="featured">
-            <h2>Destaque</h2>
-            <ul>
-                <li>
-                    <img class="plow" src="arado.jpg" alt="arado">
-                    <h3>Arados</h3>
-                    <p>Arados duráveis ​​para preparação eficaz do solo</p>
-                </li>
-                <li>
-                    <img class="plow" src="colheitadeira.jpg" alt="colheitadeira">
-                    <h3>Colheitadeiras</h3>
-                    <p>Colheitadeiras de alto desempenho para uma agricultura eficiente</p>
-                </li>
-                <!-- Add more featured products here -->
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 AgriMachines. Todos os direitos reservados.</p>
-    </footer>
-    <script src="script.js"></script> <!-- Add a script file for JavaScript -->
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Serviços</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Produzindo Qualidade</h1>
+        <h3>Orgânico, Sustentável e Confiável</h3>
+    </div>
+
+    <!-- Abas para Produtos, Serviços, Sobre e Contato -->
+    <div class="tab-container">
+        <div class="tab active" onclick="openTab('produtos')">Produtos</div>
+        <div class="tab" onclick="openTab('servicos')">Serviços</div>
+        <div class="tab" onclick="openTab('sobre')">Sobre</div>
+        <div class="tab" onclick="openTab('contato')">Contato</div>
+    </div>
+
+    <!-- Conteúdo de cada aba -->
+    <div id="produtos" class="tab-content active">
+        <h2>Nossos Produtos</h2>
+        <p>Oferecemos uma variedade de produtos orgânicos e saudáveis, livres de GMO e cultivados com o mais alto padrão de qualidade.</p>
+    </div>
+
+    <div id="servicos" class="tab-content">
+        <h2>Nossos Serviços</h2>
+        <p>Proporcionamos serviços personalizados para nossos clientes, incluindo consultoria agrícola e suporte técnico especializado.</p>
+    </div>
+
+    <div id="sobre" class="tab-content">
+        <h2>Sobre Nós</h2>
+        <p>A Agrofields é comprometida com a sustentabilidade e qualidade de seus produtos, oferecendo o melhor para nossos clientes.</p>
+    </div>
+
+    <div id="contato" class="tab-content">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para saber mais sobre nossos produtos e serviços. Estamos à disposição para atender suas dúvidas.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Agrofields - Todos os direitos reservados.
+    </div>
+
 </body>
 </html>
